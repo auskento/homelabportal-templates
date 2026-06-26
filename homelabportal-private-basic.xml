@@ -85,14 +85,6 @@
       <Name>BASIC_AUTH_CREDENTIALS</Name>
       <Value>user:password</Value>
     </Variable>
-    <Variable>
-      <Name>DOMAIN</Name>
-      <Value></Value>
-    </Variable>
-    <Variable>
-      <Name>EMAIL</Name>
-      <Value></Value>
-    </Variable>
     <!-- USENET Services -->
     <Variable>
       <Name>ENABLE_SABNZBD</Name>
