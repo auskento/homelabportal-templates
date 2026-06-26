@@ -170,12 +170,20 @@
       <Value>http://YOUR_BACKEND_HOST:7878</Value>
     </Variable>
     <Variable>
+      <Name>RADARR_LANDING</Name>
+      <Value>radarr</Value>
+    </Variable>
+    <Variable>
       <Name>ENABLE_SONARR</Name>
       <Value>false</Value>
     </Variable>
     <Variable>
       <Name>SONARR_URL</Name>
       <Value>http://YOUR_BACKEND_HOST:8989</Value>
+    </Variable>
+    <Variable>
+      <Name>SONARR_LANDING</Name>
+      <Value>sonarr</Value>
     </Variable>
     <Variable>
       <Name>ENABLE_LIDARR</Name>
@@ -186,12 +194,20 @@
       <Value>http://YOUR_BACKEND_HOST:8686</Value>
     </Variable>
     <Variable>
+      <Name>LIDARR_LANDING</Name>
+      <Value>lidarr</Value>
+    </Variable>
+    <Variable>
       <Name>ENABLE_WHISPARR</Name>
       <Value>false</Value>
     </Variable>
     <Variable>
       <Name>WHISPARR_URL</Name>
       <Value>http://YOUR_BACKEND_HOST:6969</Value>
+    </Variable>
+    <Variable>
+      <Name>WHISPARR_LANDING</Name>
+      <Value>whisparr</Value>
     </Variable>
     <Variable>
       <Name>ENABLE_PROWLARR</Name>
