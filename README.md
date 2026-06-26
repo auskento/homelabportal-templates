@@ -218,7 +218,7 @@ All templates support:
 - **STYLE**: Dashboard appearance (classic, modern, sleek, minimal)
 - **DASHBOARD_NAME**: Custom title for your dashboard
 - **DASHBOARD_ICON**: Path to custom icon (default: `/icons/homelabportal.png`)
-- **DASHBOARD_LANDING**: Default page when accessing dashboard (e.g., `radarr`, `sonarr/calendar`)
+- **DASHBOARD_LANDING**: Default page when accessing dashboard (e.g., `radarr`, `sonarr`)
 - **DASHBOARD_THEME**: Dark (default) or light
 - **DASHBOARD_ORDER**: Service category display order
 
