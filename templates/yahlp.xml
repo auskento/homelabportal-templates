@@ -65,13 +65,13 @@
       <Value>your-email@example.com</Value>
     </Variable>
 
-    <!-- TIMEZONE & DASHBOARD CUSTOMIZATION -->
+    <!-- TIMEZONE & DASHBOARD (DASH) CUSTOMIZATION -->
     <Variable>
       <Name>TZ</Name>
       <Value></Value>
     </Variable>
     <Variable>
-      <Name>STYLE</Name>
+      <Name>DASH_STYLE</Name>
       <Value>modern</Value>
     </Variable>
     <Variable>
@@ -453,9 +453,9 @@
   <Config Name="Domain" Target="DOMAIN" Default="yourdomain.com" Mode="" Description="Your domain name (for public mode)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Email" Target="EMAIL" Default="your-email@example.com" Mode="" Description="Email for Let's Encrypt notifications" Type="Variable" Display="always" Required="false" Mask="false"/>
 
-  <!-- Dashboard Settings -->
+  <!-- Dashboard (DASH) Settings -->
   <Config Name="Timezone" Target="TZ" Default="" Mode="" Description="Timezone (optional, e.g., America/New_York, Europe/London)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Dashboard Style" Target="STYLE" Default="modern" Mode="" Description="Choose: classic, modern, sleek, minimal" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Dashboard Style" Target="DASH_STYLE" Default="modern" Mode="" Description="Choose: classic, modern, sleek, minimal" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Dashboard Theme" Target="DASHBOARD_THEME" Default="dark" Mode="" Description="Choose: dark or light" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Dashboard Name" Target="DASHBOARD_NAME" Default="YAHLP" Mode="" Description="Title displayed in dashboard" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Dashboard Icon" Target="DASHBOARD_ICON" Default="/icons/yahlp.png" Mode="" Description="Path to dashboard icon" Type="Variable" Display="advanced" Required="false" Mask="false"/>

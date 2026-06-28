@@ -55,7 +55,7 @@
       <Value></Value>
     </Variable>
     <Variable>
-      <Name>STYLE</Name>
+      <Name>DASH_STYLE</Name>
       <Value>sleek</Value>
     </Variable>
     <Variable>
@@ -330,7 +330,7 @@
 
   <Config Name="IP Address" Target="IP" Default="192.168.x.x" Mode="" Description="Container IP address on your network (REQUIRED for private mode)" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Timezone" Target="TZ" Default="Australia/Melbourne" Mode="" Description="Timezone" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Dashboard Style" Target="STYLE" Default="sleek" Mode="" Description="Dashboard style: classic, modern, sleek, or minimal" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Dashboard Style" Target="DASH_STYLE" Default="sleek" Mode="" Description="Dashboard style: classic, modern, sleek, or minimal" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Dashboard Name" Target="DASHBOARD_NAME" Default="Media Server" Mode="" Description="Custom dashboard title shown in header" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Dashboard Icon" Target="DASHBOARD_ICON" Default="/icons/yahlp.png" Mode="" Description="Dashboard icon path (place custom icons in html/icons directory)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Dashboard Landing" Target="DASHBOARD_LANDING" Default="" Mode="" Description="Default iframe page (examples: radarr, sonarr/calendar). Leave blank for welcome screen" Type="Variable" Display="always" Required="false" Mask="false"/>
