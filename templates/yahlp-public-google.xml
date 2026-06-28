@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
-  <Name>yahlp - Public (Google OAuth)</Name>
+  <Name>yahlp-public-google</Name>
   <Repository>ghcr.io/auskento/yahlp:latest</Repository>
   <Registry>https://ghcr.io</Registry>
   <Network>bridge</Network>
