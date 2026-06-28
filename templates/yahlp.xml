@@ -535,7 +535,7 @@
   <Config Name="Jellyfin Icon" Target="ICON_URL_JELLYFIN" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 
   <Config Name="Enable Emby" Target="ENABLE_EMBY" Default="false" Mode="" Description="Emby - Media Server" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Emby URL" Target="EMBY_URL" Default="http://emby:8096" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Emby URL" Target="EMBY_URL=http://emby:8096
   <Config Name="Emby Domain" Target="EMBY_DOMAIN" Default="emby.yourdomain.com" Mode="" Description="Subdomain for Emby" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Emby Redirect URI" Target="EMBY_REDIRECT_URI" Default="https://emby.yourdomain.com/oauth2callback" Mode="" Description="OAuth redirect URI" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Emby Icon" Target="ICON_URL_EMBY" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
@@ -571,3 +571,4 @@
   <Config Name="SSL Ciphers" Target="SSL_CIPHERS" Default="HIGH:!aNULL:!MD5" Mode="" Description="Allowed ciphers" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Apache Log Level" Target="APACHE_LOG_LEVEL" Default="warn" Mode="" Description="debug, info, notice, warn, crit" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
+
