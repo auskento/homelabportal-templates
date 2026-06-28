@@ -338,6 +338,8 @@
   <Config Name="Dashboard Order" Target="DASHBOARD_ORDER" Default="CONTENT,SEARCH,USENET,TORRENTS,MEDIA" Mode="" Description="Service group display order" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Enabled Torrent/Usenet Sites" Target="SITES_ENABLED" Default="" Mode="" Description="Comma-separated 3-letter codes. Torrent: TPB=Pirate Bay, FIL=FileList, HDB=HDBits, IPT=IP Torrents, 1337=1337x, YTS=YTS, LAT=LimeTorrents, NYA=Nyaa, PTP=PassThePopcorn. Usenet: DOG=DOGnzb, DRS=DrunkenSlug, NLF=nzb.life, NFW=NZBFinder, NGK=NZBgeek, PLA=nzbplanet, TAB=Tabula Rasa. Example: TPB,DOG,LAT,DRS" Type="Variable" Display="always" Required="false" Mask="false"/>
 
+  <!-- Authentication -->
+  <Config Name="Authentication Type" Target="AUTHTYPE" Default="basic" Mode="" Description="Authentication method for private mode (basic only)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Basic Auth Credentials" Target="BASIC_AUTH_CREDENTIALS" Default="user:password" Mode="" Description="Format: user:pass|user2:pass2 (pipe-separated for multiple users)" Type="Variable" Display="always" Required="true" Mask="true"/>
 
   <!-- USENET Services -->
