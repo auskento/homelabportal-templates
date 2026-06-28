@@ -404,7 +404,7 @@
   <Config Name="Enable Bazarr" Target="ENABLE_BAZARR" Default="false" Mode="" Description="Bazarr - Subtitle Management" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Bazarr URL" Target="BAZARR_URL" Default="http://bazarr:6767" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Enable Emby" Target="ENABLE_EMBY" Default="false" Mode="" Description="Emby - Media Streaming" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Emby URL" Target="EMBY_URL=http://emby:8096
+  <Config Name="Emby URL" Target="EMBY_URL" Default="http://emby:8096" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Emby Domain" Target="EMBY_DOMAIN" Default="" Mode="" Description="Optional subdomain (e.g., emby.yourdomain.com)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Enable Plex" Target="ENABLE_PLEX" Default="false" Mode="" Description="Plex - Media Streaming" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Plex URL" Target="PLEX_URL" Default="http://plex:32400" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
