@@ -408,7 +408,7 @@
     </Variable>
     <Variable>
       <Name>ENTRA_PROVIDER_METADATA_URL</Name>
-      <Value></Value>
+      <Value>https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration</Value>
     </Variable>
     <Variable>
       <Name>ENTRA_CRYPTO_PASSPHRASE</Name>
@@ -558,7 +558,7 @@
   <Config Name="Entra Client ID" Target="ENTRA_CLIENT_ID" Default="" Mode="" Description="Azure AD Application ID" Type="Variable" Display="advanced" Required="false" Mask="true"/>
   <Config Name="Entra Client Secret" Target="ENTRA_CLIENT_SECRET" Default="" Mode="" Description="Azure AD Application Secret" Type="Variable" Display="advanced" Required="false" Mask="true"/>
   <Config Name="Entra Redirect URI" Target="ENTRA_REDIRECT_URI" Default="https://yourdomain.com/auth/oauth2/callback" Mode="" Description="OAuth redirect URI" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Entra Metadata URL" Target="ENTRA_PROVIDER_METADATA_URL" Default="" Mode="" Description="OpenID configuration URL from Azure AD" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Entra Metadata URL" Target="ENTRA_PROVIDER_METADATA_URL" Default="https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration" Mode="" Description="OpenID configuration URL: https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="Entra Crypto Passphrase" Target="ENTRA_CRYPTO_PASSPHRASE" Default="" Mode="" Description="Session encryption passphrase (REQUIRED)" Type="Variable" Display="advanced" Required="true" Mask="true"/>
 
   <!-- GOOGLE AUTHENTICATION -->

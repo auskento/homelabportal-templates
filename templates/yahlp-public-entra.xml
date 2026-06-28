@@ -120,7 +120,7 @@
     </Variable>
     <Variable>
       <Name>ENTRA_PROVIDER_METADATA_URL</Name>
-      <Value></Value>
+      <Value>https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration</Value>
     </Variable>
     <Variable>
       <Name>ENTRA_CRYPTO_PASSPHRASE</Name>
@@ -390,7 +390,7 @@
   <Config Name="Entra Client ID" Target="ENTRA_CLIENT_ID" Default="" Mode="" Description="Azure AD Application ID (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Entra Client Secret" Target="ENTRA_CLIENT_SECRET" Default="" Mode="" Description="Azure AD Application Secret (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Entra Redirect URI" Target="ENTRA_REDIRECT_URI" Default="https://yourdomain.com/auth/oauth2/callback" Mode="" Description="OAuth redirect URI (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Entra Metadata URL" Target="ENTRA_PROVIDER_METADATA_URL" Default="" Mode="" Description="OpenID configuration URL from Azure AD (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Entra Metadata URL" Target="ENTRA_PROVIDER_METADATA_URL" Default="https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration" Mode="" Description="OpenID configuration URL (REQUIRED): https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Entra Crypto Passphrase" Target="ENTRA_CRYPTO_PASSPHRASE" Default="" Mode="" Description="Session encryption passphrase (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Enable SABnzbd" Target="ENABLE_SABNZBD" Default="false" Mode="" Description="SABnzbd - Usenet Client" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="SABnzbd URL" Target="SABNZBD_URL" Default="http://sabnzbd:8080" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
