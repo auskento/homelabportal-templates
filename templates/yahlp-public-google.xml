@@ -398,101 +398,98 @@
   <!-- DASHBOARD SETTINGS -->
   <Config Name="Dashboard Style" Target="DASH_STYLE" Default="modern" Mode="" Description="Dashboard style: classic, modern, sleek, or minimal" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Dashboard Name" Target="DASHBOARD_NAME" Default="Media Server" Mode="" Description="Custom dashboard title" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Dashboard Icon" Target="DASHBOARD_ICON" Default="/icons/yahlp.png" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Dashboard Theme" Target="DASHBOARD_THEME" Default="dark" Mode="" Description="Theme: dark or light" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Dashboard Category Order" Target="DASHBOARD_ORDER" Default="CONTENT,SEARCH,USENET,TORRENTS,MEDIA" Mode="" Description="Service group display order" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Dashboard Landing Page" Target="DASHBOARD_LANDING" Default="" Mode="" Description="Default page to load when accessing dashboard. Examples: radarr, sonarr, sonarr/calendar, radarr/upcoming. Leave blank to show welcome screen." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Dashboard Category Order" Target="DASHBOARD_ORDER" Default="CONTENT,SEARCH,USENET,TORRENTS,MEDIA" Mode="" Description="Service group display order" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Enabled Torrent/Usenet Sites" Target="SITES_ENABLED" Default="" Mode="" Description="Comma-separated 3-letter codes. Torrent: TPB=Pirate Bay, FIL=FileList, HDB=HDBits, IPT=IP Torrents, 1337=1337x, YTS=YTS, LAT=LimeTorrents, NYA=Nyaa, PTP=PassThePopcorn. Usenet: DOG=DOGnzb, DRS=DrunkenSlug, NLF=nzb.life, NFW=NZBFinder, NGK=NZBgeek, PLA=nzbplanet, TAB=Tabula Rasa. Example: TPB,DOG,LAT,DRS" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <!-- USENET SERVICES -->
   <Config Name="Enable SABnzbd" Target="ENABLE_SABNZBD" Default="false" Mode="" Description="SABnzbd - Usenet Client" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="SABnzbd URL" Target="SABNZBD_URL" Default="http://sabnzbd:8080" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SABnzbd Icon URL" Target="ICON_URL_SABNZBD" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <Config Name="Enable NZBGet" Target="ENABLE_NZBGET" Default="false" Mode="" Description="NZBGet - Usenet Downloads" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="NZBGet URL" Target="NZBGET_URL" Default="http://nzbget:6789" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="NZBGet Username" Target="NZBGET_USER" Default="" Mode="" Description="NZBGet username (optional)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="NZBGet Password" Target="NZBGET_PASS" Default="" Mode="" Description="NZBGet password (optional)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="NZBGet Icon URL" Target="ICON_URL_NZBGET" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <Config Name="Enable NZBHydra" Target="ENABLE_NZBHYDRA" Default="false" Mode="" Description="NZBHydra - NZB Indexer" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="NZBHydra URL" Target="NZBHYDRA_URL" Default="http://nzbhydra:5076" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="NZBHydra Icon URL" Target="ICON_URL_NZBHYDRA" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <!-- TORRENTS SERVICES -->
-  <Config Name="Enable Deluge" Target="ENABLE_DELUGE" Default="false" Mode="" Description="Deluge - Torrent Client" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Deluge URL" Target="DELUGE_URL" Default="http://deluge:8112" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
-
   <Config Name="Enable Transmission" Target="ENABLE_TRANSMISSION" Default="false" Mode="" Description="Transmission - Torrent Client" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Transmission URL" Target="TRANSMISSION_URL" Default="http://transmission:6969" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Transmission Icon URL" Target="ICON_URL_TRANSMISSION" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <Config Name="Enable qBittorrent" Target="ENABLE_QBITTORRENT" Default="false" Mode="" Description="qBittorrent - Torrent Client" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="qBittorrent URL" Target="QBITTORRENT_URL" Default="http://qbittorrent:8080" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="qBittorrent Icon URL" Target="ICON_URL_QBITTORRENT" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
+
+  <Config Name="Enable Deluge" Target="ENABLE_DELUGE" Default="false" Mode="" Description="Deluge - Torrent Client" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Deluge URL" Target="DELUGE_URL" Default="http://deluge:8112" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Deluge Icon URL" Target="ICON_URL_DELUGE" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <!-- CONTENT SERVICES -->
-  <Config Name="Enable Radarr" Target="ENABLE_RADARR" Default="false" Mode="" Description="Radarr - Movie Automation" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Radarr URL" Target="RADARR_URL" Default="http://radarr:7878" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Radarr Landing" Target="RADARR_LANDING" Default="radarr" Mode="" Description="Landing page when clicking Radarr (e.g., radarr, radarr/calendar)" Type="Variable" Display="always" Required="false" Mask="false"/>
-
   <Config Name="Enable Sonarr" Target="ENABLE_SONARR" Default="false" Mode="" Description="Sonarr - TV Show Automation" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Sonarr URL" Target="SONARR_URL" Default="http://sonarr:8989" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Sonarr Landing" Target="SONARR_LANDING" Default="sonarr" Mode="" Description="Landing page when clicking Sonarr (e.g., sonarr, sonarr/calendar)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Sonarr Icon URL" Target="ICON_URL_SONARR" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
-  <Config Name="Enable Lidarr" Target="ENABLE_LIDARR" Default="false" Mode="" Description="Lidarr - Music Automation" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Lidarr URL" Target="LIDARR_URL" Default="http://lidarr:8686" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Lidarr Landing" Target="LIDARR_LANDING" Default="lidarr" Mode="" Description="Landing page when clicking Lidarr (e.g., lidarr, lidarr/albums)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Enable Radarr" Target="ENABLE_RADARR" Default="false" Mode="" Description="Radarr - Movie Automation" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Radarr URL" Target="RADARR_URL" Default="http://radarr:7878" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Radarr Landing" Target="RADARR_LANDING" Default="radarr" Mode="" Description="Landing page when clicking Radarr (e.g., radarr, radarr/calendar)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Radarr Icon URL" Target="ICON_URL_RADARR" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <Config Name="Enable Whisparr" Target="ENABLE_WHISPARR" Default="false" Mode="" Description="Whisparr - Adult Content" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Whisparr URL" Target="WHISPARR_URL" Default="http://whisparr:6969" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Whisparr Landing" Target="WHISPARR_LANDING" Default="whisparr" Mode="" Description="Landing page when clicking Whisparr (e.g., whisparr, whisparr/performers)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Whisparr Icon URL" Target="ICON_URL_WHISPARR" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
+
+  <Config Name="Enable Lidarr" Target="ENABLE_LIDARR" Default="false" Mode="" Description="Lidarr - Music Automation" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Lidarr URL" Target="LIDARR_URL" Default="http://lidarr:8686" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Lidarr Landing" Target="LIDARR_LANDING" Default="lidarr" Mode="" Description="Landing page when clicking Lidarr (e.g., lidarr, lidarr/albums)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Lidarr Icon URL" Target="ICON_URL_LIDARR" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <!-- SEARCH SERVICES -->
   <Config Name="Enable Prowlarr" Target="ENABLE_PROWLARR" Default="false" Mode="" Description="Prowlarr - Indexer Manager" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Prowlarr URL" Target="PROWLARR_URL" Default="http://prowlarr:9696" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Prowlarr Icon URL" Target="ICON_URL_PROWLARR" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <Config Name="Enable Seerr" Target="ENABLE_SEERR" Default="false" Mode="" Description="Seerr - Request Manager" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Seerr URL" Target="SEERR_URL" Default="http://seerr:5055" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Seerr Icon URL" Target="ICON_URL_SEERR" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <Config Name="Enable Bazarr" Target="ENABLE_BAZARR" Default="false" Mode="" Description="Bazarr - Subtitle Management" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Bazarr URL" Target="BAZARR_URL" Default="http://bazarr:6767" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Bazarr Icon URL" Target="ICON_URL_BAZARR" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <!-- MEDIA SERVICES -->
+  <Config Name="Enable Jellyfin" Target="ENABLE_JELLYFIN" Default="false" Mode="" Description="Jellyfin - Media Streaming" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Jellyfin URL" Target="JELLYFIN_URL" Default="http://jellyfin:8096" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Jellyfin Icon URL" Target="ICON_URL_JELLYFIN" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
+
   <Config Name="Enable Emby" Target="ENABLE_EMBY" Default="false" Mode="" Description="Emby - Media Streaming" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Emby URL" Target="EMBY_URL" Default="http://emby:8096" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Emby Domain" Target="EMBY_DOMAIN" Default="" Mode="" Description="Optional subdomain (e.g., emby.yourdomain.com)" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Emby Redirect URI" Target="EMBY_REDIRECT_URI" Default="" Mode="" Description="Google redirect URI (e.g., https://emby.yourdomain.com/oauth2callback)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Emby Icon URL" Target="ICON_URL_EMBY" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <Config Name="Enable Plex" Target="ENABLE_PLEX" Default="false" Mode="" Description="Plex - Media Streaming" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Plex URL" Target="PLEX_URL" Default="http://plex:32400" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Plex Domain" Target="PLEX_DOMAIN" Default="" Mode="" Description="Optional subdomain (e.g., plex.yourdomain.com)" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Plex Redirect URI" Target="PLEX_REDIRECT_URI" Default="" Mode="" Description="Google redirect URI (e.g., https://plex.yourdomain.com/oauth2callback)" Type="Variable" Display="always" Required="false" Mask="false"/>
-
-  <Config Name="Enable Jellyfin" Target="ENABLE_JELLYFIN" Default="false" Mode="" Description="Jellyfin - Media Streaming" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Jellyfin URL" Target="JELLYFIN_URL" Default="http://jellyfin:8096" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Plex Icon URL" Target="ICON_URL_PLEX" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <Config Name="Enable Tautulli" Target="ENABLE_TAUTULLI" Default="false" Mode="" Description="Tautulli - Analytics" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Tautulli URL" Target="TAUTULLI_URL" Default="http://tautulli:8181" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Tautulli Icon URL" Target="ICON_URL_TAUTULLI" Default="" Mode="" Description="Custom icon URL (leave blank for auto-generated)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <!-- AUTHENTICATION -->
   <Config Name="Authentication Type" Target="AUTHTYPE" Default="google" Mode="" Description="Authentication method (Google OAuth for this template)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Google Client ID" Target="GOOGLE_CLIENT_ID" Default="" Mode="" Description="From Google Cloud Console (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Google Client Secret" Target="GOOGLE_CLIENT_SECRET" Default="" Mode="" Description="From Google Cloud Console (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Google Redirect URI" Target="GOOGLE_REDIRECT_URI" Default="https://yourdomain.com" Mode="" Description="OAuth redirect URI (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="false"/>
-
-  <!-- SERVICE ICON URLS -->
-  <Config Name="Sonarr Icon URL" Target="ICON_URL_SONARR" Default="" Mode="" Description="Custom icon URL for Sonarr (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Radarr Icon URL" Target="ICON_URL_RADARR" Default="" Mode="" Description="Custom icon URL for Radarr (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Whisparr Icon URL" Target="ICON_URL_WHISPARR" Default="" Mode="" Description="Custom icon URL for Whisparr (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Lidarr Icon URL" Target="ICON_URL_LIDARR" Default="" Mode="" Description="Custom icon URL for Lidarr (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Prowlarr Icon URL" Target="ICON_URL_PROWLARR" Default="" Mode="" Description="Custom icon URL for Prowlarr (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Seerr Icon URL" Target="ICON_URL_SEERR" Default="" Mode="" Description="Custom icon URL for Seerr (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Bazarr Icon URL" Target="ICON_URL_BAZARR" Default="" Mode="" Description="Custom icon URL for Bazarr (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="SABnzbd Icon URL" Target="ICON_URL_SABNZBD" Default="" Mode="" Description="Custom icon URL for SABnzbd (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="NZBGet Icon URL" Target="ICON_URL_NZBGET" Default="" Mode="" Description="Custom icon URL for NZBGet (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="NZBHydra Icon URL" Target="ICON_URL_NZBHYDRA" Default="" Mode="" Description="Custom icon URL for NZBHydra (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Transmission Icon URL" Target="ICON_URL_TRANSMISSION" Default="" Mode="" Description="Custom icon URL for Transmission (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="qBittorrent Icon URL" Target="ICON_URL_QBITTORRENT" Default="" Mode="" Description="Custom icon URL for qBittorrent (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Deluge Icon URL" Target="ICON_URL_DELUGE" Default="" Mode="" Description="Custom icon URL for Deluge (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Jellyfin Icon URL" Target="ICON_URL_JELLYFIN" Default="" Mode="" Description="Custom icon URL for Jellyfin (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Emby Icon URL" Target="ICON_URL_EMBY" Default="" Mode="" Description="Custom icon URL for Emby (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Plex Icon URL" Target="ICON_URL_PLEX" Default="" Mode="" Description="Custom icon URL for Plex (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
-  <Config Name="Tautulli Icon URL" Target="ICON_URL_TAUTULLI" Default="" Mode="" Description="Custom icon URL for Tautulli (advanced view)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 
   <Config Name="Certificates Volume" Target="/etc/letsencrypt" Default="/mnt/user/appdata/yahlp-public-google/letsencrypt" Mode="rw" Description="SSL Certificates" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/yahlp-public-google/letsencrypt</Config>
   <Config Name="Logs Volume" Target="/var/log/apache2" Default="/mnt/user/appdata/yahlp-public-google/logs" Mode="rw" Description="Apache Logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/yahlp-public-google/logs</Config>
