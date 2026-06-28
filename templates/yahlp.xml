@@ -12,6 +12,7 @@
   <Category>Network:Web</Category>
   <TemplateURL>https://raw.githubusercontent.com/auskento/yahlp-templates/main/templates/yahlp.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/auskento/yahlp/main/yahlp-150.png</Icon>
+  <WebUI>https://yourdomain.com</WebUI>
   <PostArgs/>
   <CloudSync>false</CloudSync>
   <Description>yahlp - Comprehensive Master Template with ALL configuration options and environment variables visible. Choose deployment-specific templates (private-basic, public-basic, public-google, public-entra) for simpler setup.</Description>

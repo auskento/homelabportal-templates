@@ -12,6 +12,7 @@
   <Category>Network:Web</Category>
   <TemplateURL>https://raw.githubusercontent.com/auskento/yahlp-templates/main/templates/yahlp-public-entra.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/auskento/yahlp/main/yahlp-150.png</Icon>
+  <WebUI>https://yourdomain.com</WebUI>
   <PostArgs/>
   <CloudSync>false</CloudSync>
   <Description>yahlp - Public Mode with Entra ID (Microsoft) OAuth2 authentication. Full external access with HTTPS via Let's Encrypt, protected by username/password.</Description>

@@ -12,6 +12,7 @@
   <Category>Network:Web</Category>
   <TemplateURL>https://raw.githubusercontent.com/auskento/yahlp-templates/main/templates/yahlp-private-basic.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/auskento/yahlp/main/yahlp-150.png</Icon>
+  <WebUI>http://192.168.1.100</WebUI>
   <PostArgs/>
   <CloudSync>false</CloudSync>
   <Description>yahlp - Private Mode with Basic Authentication. Internal-only deployment with HTTP (no SSL), protected by username/password authentication.</Description>
