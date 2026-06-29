@@ -437,6 +437,9 @@
   <Config Name="Dashboard Category Order" Target="DASHBOARD_ORDER" Default="SAB,GET,HYD,TRA,QBI,DEL,SON,RAD,LID,WHI,PRO,SEE,BAZ,JEL,EMB,PLX,TAU" Mode="" Description="Service display order (3-letter codes, only enabled services shown). SAB=SABnzbd, GET=NZBGet, HYD=NZBHydra, TRA=Transmission, QBI=qBittorrent, DEL=Deluge, SON=Sonarr, RAD=Radarr, LID=Lidarr, WHI=Whisparr, PRO=Prowlarr, SEE=Seerr, BAZ=Bazarr, JEL=Jellyfin, EMB=Emby, PLX=Plex, TAU=Tautulli" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Enabled Torrent/Usenet Sites" Target="SITES_ENABLED" Default="" Mode="" Description="Comma-separated 3-letter codes. Torrent: TPB=Pirate Bay, FIL=FileList, HDB=HDBits, IPT=IP Torrents, 1337=1337x, YTS=YTS, LAT=LimeTorrents, NYA=Nyaa, PTP=PassThePopcorn. Usenet: DOG=DOGnzb, DRS=DrunkenSlug, NLF=nzb.life, NFW=NZBFinder, NGK=NZBgeek, PLA=nzbplanet, TAB=Tabula Rasa. Example: TPB,DOG,LAT,DRS" Type="Variable" Display="always" Required="false" Mask="false"/>
 
+  <!-- AUTHENTICATION TYPE (LOCKED) -->
+  <Config Name="Authentication Type" Target="AUTHTYPE" Default="basic" Mode="" Description="Basic Auth (locked for this template)" Type="Variable" Display="always" Required="true" Mask="false"/>
+
   <!-- AUTHENTICATION -->
   <Config Name="Basic Auth Credentials" Target="BASIC_AUTH_CREDENTIALS" Default="" Mode="" Description="Format: user:pass or user1:pass1|user2:pass2" Type="Variable" Display="always" Required="true" Mask="true"/>
 
