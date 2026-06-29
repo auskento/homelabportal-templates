@@ -101,7 +101,7 @@
     </Variable>
     <Variable>
       <Name>DASHBOARD_ORDER</Name>
-      <Value>SAB,GET,HYD,TRA,QBI,DEL,SON,RAD,LID,WHI,PRO,SEE,BAZ,JEL,EMB,PLX,TAU</Value>
+      <Value>SAB,GET,HYD,TRA,QBI,DEL,SON,RAD,LID,WHI,PRO,SEE,BAZ,JEL,EMB,PLX,TAU,MNT</Value>
     </Variable>
 
     <!-- SITES CONFIGURATION -->
@@ -394,6 +394,19 @@
       <Value></Value>
     </Variable>
 
+    <Variable>
+      <Name>ENABLE_MAINTAINERR</Name>
+      <Value>false</Value>
+    </Variable>
+    <Variable>
+      <Name>MAINTAINERR_URL</Name>
+      <Value>http://maintainerr:6246</Value>
+    </Variable>
+    <Variable>
+      <Name>ICON_URL_MAINTAINERR</Name>
+      <Value></Value>
+    </Variable>
+
     <!-- SSL CONFIGURATION (Advanced) -->
     <Variable>
       <Name>SSL_PROTOCOLS</Name>
@@ -511,4 +524,8 @@
   <Config Name="Enable Tautulli" Target="ENABLE_TAUTULLI" Default="false" Mode="" Description="Tautulli - Plex Analytics (Settings - Show Advanced - Web Interface - Enable Proxy, Set Public Domain to https://yahlp.yourdomain.com/tautulli for reverse proxy)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Tautulli URL" Target="TAUTULLI_URL" Default="http://tautulli:8181" Mode="" Description="Your local url" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Tautulli Icon" Target="ICON_URL_TAUTULLI" Default="" Mode="" Description="Custom icon URL (leave blank for included)" Type="Variable" Display="always" Required="false" Mask="false"/>
+
+  <Config Name="Enable Maintainerr" Target="ENABLE_MAINTAINERR" Default="false" Mode="" Description="Maintainerr - Media Server Maintenance (Set the service's BaseURL/SubPath to /maintainerr for reverse proxy)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Maintainerr URL" Target="MAINTAINERR_URL" Default="http://maintainerr:6246" Mode="" Description="Your local url" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Maintainerr Icon" Target="ICON_URL_MAINTAINERR" Default="" Mode="" Description="Custom icon URL (leave blank for included)" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>

@@ -439,7 +439,7 @@
   </Environment>
 
   <!-- DEPLOYMENT & ACCESS MODE -->
-  <Config Name="Access Mode" Target="ACCESS_MODE" Default="public" Mode="" Description="Choose: public or private" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Access Mode" Target="ACCESS_MODE" Default="public" Mode="" Description="Choose: public or private" Type="Variable" Display="always" Required="true" Mask="false"/>
 
   <!-- DASHBOARD SETTINGS -->
   <Config Name="Dashboard Style" Target="DASH_STYLE" Default="modern" Mode="" Description="Choose: classic, modern, sleek, minimal" Type="Variable" Display="always" Required="false" Mask="false"/>
