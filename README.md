@@ -7,13 +7,14 @@ These templates are part of the [Unraid Community Applications](https://unraid.n
 ## Overview
 
 YAHLP (Yet Another HomeLab Portal) is a comprehensive reverse proxy and unified media server dashboard that supports:
-- **17 services** (Radarr, Sonarr, Plex, Emby, Jellyfin, and more)
+- **18 services** (Radarr, Sonarr, Plex, Emby, Jellyfin, Maintainerr, and more)
 - **4 dashboard styles** (Classic, Modern, Sleek, Minimal)
 - **Dark/Light theme toggle** with persistent preference
 - **Multiple authentication methods** (None, Basic Auth, Google OAuth2, Entra ID)
 - **Public and Private deployment modes**
 - **Automatic HTTPS** (Let's Encrypt) for public deployments
 - **Subdomain-based routing** for media services
+- **3-digit service codes** for easy dashboard ordering and configuration
 
 ## Available Templates
 
@@ -126,6 +127,91 @@ Choose the template that matches your deployment scenario:
 
 ---
 
+## Service Codes Reference
+
+All services use 3-letter codes for dashboard configuration. Use these codes in the `DASHBOARD_ORDER` setting to customize your dashboard layout:
+
+| Code | Service | Category |
+|------|---------|----------|
+| **SAB** | SABnzbd | USENET |
+| **GET** | NZBGet | USENET |
+| **HYD** | NZBHydra | USENET |
+| **TRA** | Transmission | TORRENTS |
+| **QBI** | qBittorrent | TORRENTS |
+| **DEL** | Deluge | TORRENTS |
+| **SON** | Sonarr | CONTENT |
+| **RAD** | Radarr | CONTENT |
+| **LID** | Lidarr | CONTENT |
+| **WHI** | Whisparr | CONTENT |
+| **PRO** | Prowlarr | SEARCH |
+| **SEE** | Seerr | SEARCH |
+| **BAZ** | Bazarr | SEARCH |
+| **JEL** | Jellyfin | MEDIA |
+| **EMB** | Emby | MEDIA |
+| **PLX** | Plex | MEDIA |
+| **TAU** | Tautulli | MEDIA |
+| **MNT** | Maintainerr | MEDIA |
+
+**Example DASHBOARD_ORDER configurations:**
+```
+# Default order (all services)
+DASHBOARD_ORDER=SAB,GET,HYD,TRA,QBI,DEL,SON,RAD,LID,WHI,PRO,SEE,BAZ,JEL,EMB,PLX,TAU,MNT
+
+# Media servers first
+DASHBOARD_ORDER=JEL,EMB,PLX,TAU,MNT,SON,RAD,LID,WHI,PRO,SEE,BAZ,SAB,GET,HYD,TRA,QBI,DEL
+
+# Downloads first
+DASHBOARD_ORDER=SAB,GET,HYD,TRA,QBI,DEL,SON,RAD,LID,WHI,PRO,SEE,BAZ,JEL,EMB,PLX,TAU,MNT
+
+# Minimal setup (just media and content)
+DASHBOARD_ORDER=JEL,EMB,PLX,TAU,MNT,SON,RAD
+```
+
+---
+
+## Template Selection Guide
+
+Choose the right template based on your deployment scenario:
+
+### Deployment Mode
+1. **Private Mode** - For internal/home network access
+   - Use `yahlp-private-basic.xml`
+   - HTTP only (no certificates needed)
+   - Basic authentication
+
+2. **Public Mode** - For external internet access
+   - Use `yahlp-public-*.xml` (choose auth method)
+   - HTTPS with Let's Encrypt certificates
+   - Choose authentication method: Basic, Google OAuth, or Entra ID
+
+### Authentication Methods
+
+#### `yahlp-public-basic.xml`
+- **Best for:** External access with simple username/password
+- **Security:** Basic Auth (good for home networks)
+- **SSL:** Yes (Let's Encrypt HTTPS)
+- **Setup difficulty:** Easy
+
+#### `yahlp-public-google.xml`
+- **Best for:** External access with Google account authentication
+- **Security:** OAuth2 (more secure than basic auth)
+- **SSL:** Yes (Let's Encrypt HTTPS)
+- **Setup difficulty:** Medium (requires Google Cloud setup)
+
+#### `yahlp-public-entra.xml`
+- **Best for:** Enterprise networks and Microsoft account users
+- **Security:** OAuth2 with Azure AD (enterprise-grade)
+- **SSL:** Yes (Let's Encrypt HTTPS)
+- **Setup difficulty:** Medium-Hard (requires Azure AD setup)
+
+#### `yahlp-private-basic.xml`
+- **Best for:** Internal-only deployments (home labs, local networks)
+- **Security:** Basic Auth only
+- **SSL:** No (HTTP only)
+- **Setup difficulty:** Easy
+
+---
+
 ## Quick Start
 
 ### For Private Mode (Basic Auth):
@@ -175,34 +261,35 @@ Or use hostnames if you have DNS configured:
 - `NZBGet URL`: `http://nzbget.local:6789/nzbget`
 - etc.
 
-### Supported Services (17 total):
+### Supported Services (18 total):
 
 **Downloads/USENET:**
-- SABnzbd
-- NZBGet
-- NZBHydra
+- SABnzbd (SAB)
+- NZBGet (GET)
+- NZBHydra (HYD)
 
 **Torrents:**
-- Deluge
-- Transmission
-- qBittorrent
+- Deluge (DEL)
+- Transmission (TRA)
+- qBittorrent (QBI)
 
 **Content Management:**
-- Radarr (Movies)
-- Sonarr (TV)
-- Lidarr (Music)
-- Whisparr (Adult)
+- Radarr (RAD) - Movies
+- Sonarr (SON) - TV
+- Lidarr (LID) - Music
+- Whisparr (WHI) - Adult
 
 **Search/Requests:**
-- Prowlarr (Indexer Manager)
-- Seerr (Request Manager)
-- Bazarr (Subtitles)
+- Prowlarr (PRO) - Indexer Manager
+- Seerr (SEE) - Request Manager
+- Bazarr (BAZ) - Subtitles
 
 **Media Streaming:**
-- Emby
-- Plex
-- Jellyfin
-- Tautulli (Analytics)
+- Emby (EMB)
+- Plex (PLX)
+- Jellyfin (JEL)
+- Tautulli (TAU) - Analytics
+- Maintainerr (MNT) ⭐ NEW - Media maintenance
 
 ---
 
