@@ -101,7 +101,7 @@
     </Variable>
     <Variable>
       <Name>DASHBOARD_ORDER</Name>
-      <Value>SAB,GET,HYD,TRA,QBI,DEL,SON,RAD,LID,WHI,PRO,SEE,BAZ,JEL,EMB,PLX,TAU</Value>
+      <Value>SAB,GET,HYD,TRA,QBI,DEL,SON,RAD,LID,WHI,PRO,SEE,BAZ,JEL,EMB,PLX,TAU,MNT</Value>
     </Variable>
 
     <!-- SITES CONFIGURATION -->
