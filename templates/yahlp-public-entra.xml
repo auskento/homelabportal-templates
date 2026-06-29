@@ -314,6 +314,14 @@
       <Value>http://seerr:5055</Value>
     </Variable>
     <Variable>
+      <Name>SEERR_DOMAIN</Name>
+      <Value>seerr.yourdomain.com</Value>
+    </Variable>
+    <Variable>
+      <Name>SEERR_REDIRECT_URI</Name>
+      <Value>https://seerr.yourdomain.com/oauth2callback</Value>
+    </Variable>
+    <Variable>
       <Name>ICON_URL_SEERR</Name>
       <Value></Value>
     </Variable>
@@ -492,6 +500,8 @@
 
   <Config Name="Enable Seerr" Target="ENABLE_SEERR" Default="false" Mode="" Description="Seerr - Request Manager (Set the service's BaseURL/SubPath to /seerr for reverse proxy)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Seerr URL" Target="SEERR_URL" Default="http://seerr:5055" Mode="" Description="Backend URL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Seerr Domain" Target="SEERR_DOMAIN" Default="seerr.yourdomain.com" Mode="" Description="Subdomain for Seerr" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Seerr Redirect URI" Target="SEERR_REDIRECT_URI" Default="https://seerr.yourdomain.com/oauth2callback" Mode="" Description="OAuth redirect URI" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Seerr Icon" Target="ICON_URL_SEERR" Default="" Mode="" Description="Custom icon URL (leave blank for included)" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <Config Name="Enable Bazarr" Target="ENABLE_BAZARR" Default="false" Mode="" Description="Bazarr - Subtitle Manager (Set the service's BaseURL/SubPath to /bazarr for reverse proxy)" Type="Variable" Display="always" Required="false" Mask="false"/>
