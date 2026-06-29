@@ -101,7 +101,7 @@
     </Variable>
     <Variable>
       <Name>DASHBOARD_ORDER</Name>
-      <Value>CONTENT,SEARCH,USENET,TORRENTS,MEDIA</Value>
+      <Value>SAB,GET,HYD,TRA,QBI,DEL,SON,RAD,LID,WHI,PRO,SEE,BAZ,JEL,EMB,PLX,TAU</Value>
     </Variable>
 
     <!-- SITES CONFIGURATION -->
@@ -415,7 +415,7 @@
   <Config Name="Dashboard Icon URL" Target="DASHBOARD_ICON_URL" Default="" Mode="" Description="URL to download custom dashboard icon (optional - downloaded and cached like service icons). If provided, overrides DASHBOARD_ICON path" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Dashboard Theme" Target="DASHBOARD_THEME" Default="dark" Mode="" Description="Theme: dark or light" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Dashboard Landing Page" Target="DASHBOARD_LANDING" Default="" Mode="" Description="Default page to load when accessing dashboard. Examples: radarr, sonarr, sonarr/calendar, radarr/upcoming. Leave blank to show welcome screen." Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Dashboard Category Order" Target="DASHBOARD_ORDER" Default="CONTENT,SEARCH,USENET,TORRENTS,MEDIA" Mode="" Description="Service group display order" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Dashboard Category Order" Target="DASHBOARD_ORDER" Default="SAB,GET,HYD,TRA,QBI,DEL,SON,RAD,LID,WHI,PRO,SEE,BAZ,JEL,EMB,PLX,TAU" Mode="" Description="Service display order (3-letter codes, only enabled services shown). SAB=SABnzbd, GET=NZBGet, HYD=NZBHydra, TRA=Transmission, QBI=qBittorrent, DEL=Deluge, SON=Sonarr, RAD=Radarr, LID=Lidarr, WHI=Whisparr, PRO=Prowlarr, SEE=Seerr, BAZ=Bazarr, JEL=Jellyfin, EMB=Emby, PLX=Plex, TAU=Tautulli" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Enabled Torrent/Usenet Sites" Target="SITES_ENABLED" Default="" Mode="" Description="Comma-separated 3-letter codes. Torrent: TPB=Pirate Bay, FIL=FileList, HDB=HDBits, IPT=IP Torrents, 1337=1337x, YTS=YTS, LAT=LimeTorrents, NYA=Nyaa, PTP=PassThePopcorn. Usenet: DOG=DOGnzb, DRS=DrunkenSlug, NLF=nzb.life, NFW=NZBFinder, NGK=NZBgeek, PLA=nzbplanet, TAB=Tabula Rasa. Example: TPB,DOG,LAT,DRS" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <!-- AUTHENTICATION -->
