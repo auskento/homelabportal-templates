@@ -426,6 +426,7 @@
 
   <!-- AUTHENTICATION -->
   <Config Name="Authentication Type" Target="AUTHTYPE" Default="basic" Mode="" Description="Basic Auth (can be changed to: none, google, entra)" Type="Variable" Display="advanced" Required="true" Mask="false">basic</Config>
+  <Config Name="Test Mode" Target="TEST" Default="false" Mode="" Description="Enable Let's Encrypt --dry-run mode (test without rate limits). WARNING: Certificates will NOT be issued." Type="Variable" Display="advanced" Required="false" Mask="false"/>
 
   <!-- DOMAIN & EMAIL -->
   <Config Name="Domain Name" Target="DOMAIN" Default="yahlp.yourdomain.com" Mode="" Description="Your domain (required for Let's Encrypt SSL)" Type="Variable" Display="always" Required="true" Mask="false"/>

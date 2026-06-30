@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
-  <Name>yahlp-public-entra</Name>
+  <Name>yahlp</Name>
   <Repository>ghcr.io/auskento/yahlp:latest</Repository>
   <Registry>https://ghcr.io</Registry>
   <Network>bridge</Network>
@@ -10,13 +10,13 @@
   <Support>https://github.com/auskento/yahlp</Support>
   <Project>https://github.com/auskento/yahlp</Project>
   <Category>Network:Web</Category>
-  <TemplateURL>https://raw.githubusercontent.com/auskento/yahlp-templates/main/templates/yahlp-public-entra.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/auskento/yahlp-templates/main/templates/yahlp.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/auskento/yahlp/main/yahlp-150.png</Icon>
   <WebUI>https://yourdomain.com</WebUI>
   <PostArgs/>
   <CloudSync>false</CloudSync>
-  <Description>yahlp - Public Mode with HTTPS and Entra ID OAuth Authentication. Secure deployment with Microsoft Azure AD login.</Description>
-  <Overview>yahlp - Yet Another HomeLab Portal - Public Entra ID OAuth Template&#13;&#13;This template is configured for public mode deployment with:&#13;- HTTPS access (ports 80 for HTTP redirect and 443 for HTTPS)&#13;- Entra ID (Microsoft Azure AD) OAuth authentication&#13;- Let's Encrypt SSL certificate (automatic renewal)&#13;- Domain-based access&#13;&#13;Requires: Azure AD application credentials, valid domain, email address, tenant ID, and Let's Encrypt certificate provisioning.</Overview>
+  <Description>yahlp - Comprehensive Master Template with ALL configuration options and environment variables visible. Choose deployment-specific templates (private-basic, public-basic, public-google, public-entra) for simpler setup.</Description>
+  <Overview>yahlp - Yet Another HomeLab Portal - Master Template&#13;&#13;This is the COMPREHENSIVE master template showing all available environment variables and configuration options.&#13;&#13;For easier deployment, use one of these specialized templates instead:&#13;- yahlp-private-basic.xml (Private mode, HTTP, Basic Auth)&#13;- yahlp-public-basic.xml (Public mode, HTTPS, Basic Auth)&#13;- yahlp-public-google.xml (Public mode, HTTPS, Google OAuth)&#13;- yahlp-public-entra.xml (Public mode, HTTPS, Entra ID OAuth)&#13;&#13;This master template is useful for:&#13;- Advanced users who want all options visible&#13;- Reference documentation of all available variables&#13;- Custom deployment configurations&#13;- Integration with automation systems</Overview>
   <Networking>
     <Mode>br0</Mode>
     <Publish>
@@ -38,16 +38,16 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/yahlp-public-entra/logs</HostDir>
+      <HostDir>/mnt/user/appdata/yahlp/logs</HostDir>
       <ContainerDir>/var/log/apache2</ContainerDir>
       <Mode>rw</Mode>
-      <Description>Apache Logs and Sites Config</Description>
+      <Description>Apache Logs</Description>
       <Access>rw</Access>
       <Exclude/>
       <IsFileShare>false</IsFileShare>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/yahlp-public-entra/letsencrypt</HostDir>
+      <HostDir>/mnt/user/appdata/yahlp/letsencrypt</HostDir>
       <ContainerDir>/etc/letsencrypt</ContainerDir>
       <Mode>rw</Mode>
       <Description>Let's Encrypt SSL Certificates</Description>
@@ -101,7 +101,7 @@
     </Variable>
     <Variable>
       <Name>DASHBOARD_ORDER</Name>
-      <Value>SAB,GET,HYD,TRA,QBI,DEL,SON,RAD,LID,WHI,PRO,SEE,BAZ,JEL,EMB,PLX,TAU,MNT</Value>
+      <Value>SAB,GET,HYD,TRA,QBI,DEL,SON,RAD,LID,WHI,PRO,SEE,BAZ,JEL,EMB,PLX,TAU</Value>
     </Variable>
 
     <!-- SITES CONFIGURATION -->
@@ -113,7 +113,11 @@
     <!-- AUTHENTICATION -->
     <Variable>
       <Name>AUTHTYPE</Name>
-      <Value>entra</Value>
+      <Value>none</Value>
+    </Variable>
+    <Variable>
+      <Name>BASIC_AUTH_CREDENTIALS</Name>
+      <Value></Value>
     </Variable>
 
     <!-- ENTRA ID (MICROSOFT) AUTHENTICATION -->
@@ -136,6 +140,20 @@
     <Variable>
       <Name>ENTRA_CRYPTO_PASSPHRASE</Name>
       <Value></Value>
+    </Variable>
+
+    <!-- GOOGLE AUTHENTICATION -->
+    <Variable>
+      <Name>GOOGLE_CLIENT_ID</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>GOOGLE_CLIENT_SECRET</Name>
+      <Value></Value>
+    </Variable>
+    <Variable>
+      <Name>GOOGLE_REDIRECT_URI</Name>
+      <Value>https://yourdomain.com</Value>
     </Variable>
 
     <!-- USENET SERVICES -->
@@ -412,19 +430,6 @@
       <Value></Value>
     </Variable>
 
-    <Variable>
-      <Name>ENABLE_MAINTAINERR</Name>
-      <Value>false</Value>
-    </Variable>
-    <Variable>
-      <Name>MAINTAINERR_URL</Name>
-      <Value>http://maintainerr:6246</Value>
-    </Variable>
-    <Variable>
-      <Name>ICON_URL_MAINTAINERR</Name>
-      <Value></Value>
-    </Variable>
-
     <!-- SSL CONFIGURATION (Advanced) -->
     <Variable>
       <Name>SSL_PROTOCOLS</Name>
@@ -442,13 +447,8 @@
     </Variable>
   </Environment>
 
-  <!-- AUTHENTICATION -->
-  <Config Name="Authentication Type" Target="AUTHTYPE" Default="entra" Mode="" Description="Entra ID OAuth (can be changed to: none, basic, google)" Type="Variable" Display="advanced" Required="true" Mask="false">entra</Config>
-  <Config Name="Test Mode" Target="TEST" Default="false" Mode="" Description="Enable Let's Encrypt --dry-run mode (test without rate limits). WARNING: Certificates will NOT be issued." Type="Variable" Display="advanced" Required="false" Mask="false"/>
-
-  <!-- DOMAIN & EMAIL -->
-  <Config Name="Domain Name" Target="DOMAIN" Default="yahlp.yourdomain.com" Mode="" Description="Your domain (required for Let's Encrypt SSL)" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Email Address" Target="EMAIL" Default="your-email@yourdomain.com" Mode="" Description="Email for Let's Encrypt notifications (required)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <!-- DEPLOYMENT & ACCESS MODE -->
+  <Config Name="Access Mode" Target="ACCESS_MODE" Default="public" Mode="" Description="Choose: public or private" Type="Variable" Display="always" Required="true" Mask="false"/>
 
   <!-- DASHBOARD SETTINGS -->
   <Config Name="Dashboard Style" Target="DASH_STYLE" Default="modern" Mode="" Description="Choose: classic, modern, sleek, minimal. Append :only to disable style switcher (e.g., classic:only)" Type="Variable" Display="always" Required="false" Mask="false"/>
@@ -459,12 +459,17 @@
   <Config Name="Dashboard Category Order" Target="DASHBOARD_ORDER" Default="SAB,GET,HYD,TRA,QBI,DEL,SON,RAD,LID,WHI,PRO,SEE,BAZ,JEL,EMB,PLX,TAU" Mode="" Description="Service display order (3-letter codes, only enabled services shown). SAB=SABnzbd, GET=NZBGet, HYD=NZBHydra, TRA=Transmission, QBI=qBittorrent, DEL=Deluge, SON=Sonarr, RAD=Radarr, LID=Lidarr, WHI=Whisparr, PRO=Prowlarr, SEE=Seerr, BAZ=Bazarr, JEL=Jellyfin, EMB=Emby, PLX=Plex, TAU=Tautulli" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Enabled Torrent/Usenet Sites" Target="SITES_ENABLED" Default="" Mode="" Description="Comma-separated 3-letter codes. Torrent: TPB=Pirate Bay, FIL=FileList, HDB=HDBits, IPT=IP Torrents, 1337=1337x, YTS=YTS, LAT=LimeTorrents, NYA=Nyaa, PTP=PassThePopcorn. Usenet: DOG=DOGnzb, DRS=DrunkenSlug, NLF=nzb.life, NFW=NZBFinder, NGK=NZBgeek, PLA=nzbplanet, TAB=Tabula Rasa. Example: TPB,DOG,LAT,DRS" Type="Variable" Display="always" Required="false" Mask="false"/>
 
-  <!-- ENTRA ID AUTHENTICATION -->
-  <Config Name="Entra Client ID" Target="ENTRA_CLIENT_ID" Default="" Mode="" Description="Azure AD Application ID (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="true"/>
-  <Config Name="Entra Client Secret" Target="ENTRA_CLIENT_SECRET" Default="" Mode="" Description="Azure AD Application Secret (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <!-- AUTHENTICATION -->
+  <Config Name="Authentication Type" Target="AUTHTYPE" Default="none" Mode="" Description="Choose: none, basic, google, entra" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Basic Auth Credentials" Target="BASIC_AUTH_CREDENTIALS" Default="" Mode="" Description="Format: user:pass or user1:pass1|user2:pass2" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Entra Client ID" Target="ENTRA_CLIENT_ID" Default="" Mode="" Description="Azure AD Application ID" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Entra Client Secret" Target="ENTRA_CLIENT_SECRET" Default="" Mode="" Description="Azure AD Application Secret" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Entra Redirect URI" Target="ENTRA_REDIRECT_URI" Default="https://yourdomain.com/auth/oauth2/callback" Mode="" Description="OAuth redirect URI" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Entra Metadata URL" Target="ENTRA_PROVIDER_METADATA_URL" Default="https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration" Mode="" Description="OpenID configuration URL: https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Entra Metadata URL" Target="ENTRA_PROVIDER_METADATA_URL" Default="https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration" Mode="" Description="OpenID configuration URL: https://login.microsoftonline.com/YOUR_TENANT_ID/v2.0/.well-known/openid-configuration" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Entra Crypto Passphrase" Target="ENTRA_CRYPTO_PASSPHRASE" Default="" Mode="" Description="Session encryption passphrase (REQUIRED)" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Google Client ID" Target="GOOGLE_CLIENT_ID" Default="" Mode="" Description="From Google Cloud Console" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Google Client Secret" Target="GOOGLE_CLIENT_SECRET" Default="" Mode="" Description="From Google Cloud Console" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Google Redirect URI" Target="GOOGLE_REDIRECT_URI" Default="https://yourdomain.com" Mode="" Description="OAuth redirect URI" Type="Variable" Display="always" Required="false" Mask="false"/>
 
   <!-- USENET SERVICES -->
   <Config Name="Enable SABnzbd" Target="ENABLE_SABNZBD" Default="false" Mode="" Description="SABnzbd - Usenet Client (Config - Special - url_base() to /sabnzbd)" Type="Variable" Display="always" Required="false" Mask="false"/>
@@ -555,3 +560,4 @@
   <Config Name="Maintainerr URL" Target="MAINTAINERR_URL" Default="http://maintainerr:6246" Mode="" Description="Your local url" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Maintainerr Icon" Target="ICON_URL_MAINTAINERR" Default="" Mode="" Description="Custom icon URL (leave blank for included)" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
+
