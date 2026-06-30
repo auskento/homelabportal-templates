@@ -55,15 +55,6 @@
       <Exclude/>
       <IsFileShare>false</IsFileShare>
     </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/yahlp/apache-conf</HostDir>
-      <ContainerDir>/etc/apache2/sites-enabled</ContainerDir>
-      <Mode>rw</Mode>
-      <Description>Apache Virtual Host Configuration</Description>
-      <Access>rw</Access>
-      <Exclude/>
-      <IsFileShare>false</IsFileShare>
-    </Volume>
   </Data>
 
   <Environment>
